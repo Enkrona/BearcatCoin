@@ -8,9 +8,9 @@ public class Block {
 	public String previousHash;  //  hash of the prior block 
 	private String data; // the actual data contained inside the block 
 	private long timeStamp; // using epoch seconds 
-	private int nonce;
-	private Date formatedDate; 
-
+	private Date formatedDate;  //  The fancily formatted date for each block in the chain
+	
+	private int nonce;  // The nonce for each block 
 	
 	public Block(String data,String previousHash ) {
 		this.data = data;
@@ -38,7 +38,7 @@ public class Block {
 			hash = getHash();
 		}
 		
-		System.out.println("Block Mined!!! : " + hash);
+		System.out.println("Block Mined: " + hash);
 	}
 	
 }
